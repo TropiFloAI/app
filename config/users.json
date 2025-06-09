@@ -1,0 +1,29 @@
+{
+    "MPP&E": {
+        "password": "MPP&EPOC#1",
+        "base_dir": "../Margarita/tasks/MPPE_POC_1/PinacoladaV0",
+        "baseline_file": "../Margarita/tasks/MPPE_POC_1/baseline/experiment.py",
+        "page_title": "Idea by ROC_AUC MPP&E POC#1 SNP500",
+        "ideas_file": "../Margarita/tasks/MPPE_POC_1/ideas.json",
+        "baseline_score": 0.51,
+        "metric": "ROC_AUC"
+    },
+    "MPP&E_POC_2": {
+        "password": "MPP&EPOC#2",
+        "base_dir": "../Margarita/tasks/MPPE_POC_2/PinacoladaV0",
+        "baseline_file": "../Margarita/tasks/MPPE_POC_2/baseline/experiment.py",
+        "page_title": "Idea",
+        "ideas_file": "../Margarita/tasks/MPPE_POC_2/ideas.json",
+        "baseline_score": 3.6,
+        "metric": "RMSE"
+    },
+    "assaf": {
+        "password": "assaf_POC",
+        "base_dir": "../Margarita/tasks/asaf/PinacoladaV0",
+        "baseline_file": "../Margarita/tasks/asaf/baseline/experiment.py",
+        "page_title": "Improvement metric",
+        "ideas_file": "../Margarita/tasks/asaf/ideas.json",
+        "baseline_score": 0.0222,
+        "metric": "absolute_improvement"
+    }
+} 

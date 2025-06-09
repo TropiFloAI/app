@@ -1,11 +1,10 @@
 # Streamlit App Deployment
 
 
-source .venv/bin/activate
-
+source app/bin/activate
 
 To run the Streamlit app:
 
 pip install streamlit pandas st-diff-viewer
 
-streamlit run app.py
+streamlit run app.py --server.port 8502

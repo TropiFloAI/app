@@ -1,0 +1,10 @@
+version: "3"
+tunnels:
+  streamlit:
+    proto: http
+    addr: 8501
+    inspect: false
+    schemes: [https]
+    request_headers:
+      add:
+        ngrok-skip-browser-warning: "true"
