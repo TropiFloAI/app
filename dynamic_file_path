@@ -1,0 +1,36 @@
+                # Enhanced processing UI with stages
+                current_idea_index = len(st.session_state.processed_ideas)
+                current_idea_name = st.session_state.all_results[current_idea_index]["idea"] if current_idea_index < len(st.session_state.all_results) and current_idea_index < st.session_state.selected_idea_count else "Completed"
+                
+                # Overall progress
+                overall_progress = processed_count / total_ideas if total_ideas > 0 else 0
+                st.markdown(f"**Processing Idea {processed_count + 1} of {total_ideas}**")
+                st.progress(overall_progress)
+                
+                # Current idea being processed - show immediately
+                st.markdown("---")
+                if current_idea_index < len(st.session_state.all_results) and current_idea_index < st.session_state.selected_idea_count:
+                    st.markdown(f"🔬 **Current Idea:** `{current_idea_name.replace('_', ' ').title()}`")
+                else:
+                    st.markdown("🎉 **All Ideas Completed!**")
+                
+                # Define the stages
+                stages = [
+                    {"name": "📚 Reading Literature", "icon": "📚", "duration": 3},
+                    {"name": "💡 Implementing Idea", "icon": "💡", "duration": 4},
+                    {"name": "🧠 Training Model", "icon": "🧠", "duration": 5},
+                    {"name": "📊 Evaluating Results", "icon": "📊", "duration": 3},
+                    {"name": "✅ Finalizing Code", "icon": "✅", "duration": 2}
+                ]
+                
+                # Initialize stage tracking if not exists
+                if 'current_stage' not in st.session_state:
+                    st.session_state.current_stage = 0
+                if 'stage_start_time' not in st.session_state:
+                    st.session_state.stage_start_time = time.time()
+                
+                current_stage = st.session_state.current_stage
+                stage_start_time = st.session_state.stage_start_time
+                
+                # Only show stages if we're still processing an idea
+                if current_idea_index < len(st.session_state.all_results) and current_idea_index < st.session_state.selected_idea_count: 

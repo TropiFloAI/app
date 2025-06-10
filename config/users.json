@@ -25,5 +25,15 @@
         "ideas_file": "../Margarita/tasks/asaf/ideas.json",
         "baseline_score": 0.0222,
         "metric": "absolute_improvement"
+    },
+    "algo_trading": {
+        "password": "algo_trading",
+        "base_dir": "../Margarita/tasks/ensimag-trading-2024/PinacoladaV0",
+        "baseline_file": "../Margarita/tasks/ensimag-trading-2024/baseline/experiment.py",
+        "page_title": "Improvement metric",
+        "ideas_file": "../Margarita/tasks/ensimag-trading-2024/ideas.json",
+        "baseline_score": 0.5,
+        "metric": "leaderboard_score",
+        "random": "true"
     }
 } 
